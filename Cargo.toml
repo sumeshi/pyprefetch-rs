@@ -7,6 +7,9 @@ authors = ["sumeshi <j15322sn@gmail.com>"]
 name = "prefetch"
 crate-type = ["cdylib"]
 
+[dependencies]
+libprefetch = "0.1.1"
+
 [dependencies.pyo3]
 version = "0.9.0-alpha.1"
 features = ["extension-module"]
