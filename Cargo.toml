@@ -1,0 +1,12 @@
+[package]
+name = "pyprefetch-rs"
+version = "0.1.0"
+authors = ["sumeshi <j15322sn@gmail.com>"]
+
+[lib]
+name = "prefetch"
+crate-type = ["cdylib"]
+
+[dependencies.pyo3]
+version = "0.9.0-alpha.1"
+features = ["extension-module"]
