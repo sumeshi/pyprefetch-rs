@@ -3,16 +3,18 @@ extern crate pyo3;
 use pyo3::prelude::*;
 use pyo3::wrap_pyfunction;
 
+mod hoge;
+
 #[pyfunction]
-/// Formats the sum of two numbers as string
-fn sum_as_string(a: usize, b: usize) -> PyResult<String> {
-    Ok((a + b).to_string())
+fn get_dict(_py: Python<'_>, filePath: &'static str) -> PyObject {
+    let dict = PyObject::from(hoge::hoge(filePath).to_object(_py));
+    return dict;
 }
 
 /// This module is a python module implemented in Rust.
 #[pymodule]
-fn prefetch(py: Python, m: &PyModule) -> PyResult<()> {
-    m.add_wrapped(wrap_pyfunction!(sum_as_string))?;
+fn prefetch(_py: Python, m: &PyModule) -> PyResult<()> {
+    m.add_wrapped(wrap_pyfunction!(get_dict))?;
 
     Ok(())
 }
