@@ -3,11 +3,11 @@ extern crate pyo3;
 use pyo3::prelude::*;
 use pyo3::types::{PyDict, PyList};
 
-mod prefetch;
+mod pyprefetch;
 
 #[pyclass]
 struct Prefetch {
-    p: prefetch::PyPrefetch,
+    p: pyprefetch::PyPrefetch,
     #[pyo3(get)]
     name: String,
     #[pyo3(get)]
@@ -20,7 +20,7 @@ struct Prefetch {
 impl Prefetch {
     #[new]
     fn new(paths: String) -> Self {
-        let p: prefetch::PyPrefetch = prefetch::PyPrefetch::new(paths);
+        let p: pyprefetch::PyPrefetch = pyprefetch::PyPrefetch::new(paths);
 
         let name: String = p.instance.name().to_string();
         let exec_count: usize = p.instance.execution_counter();
