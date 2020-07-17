@@ -13,3 +13,6 @@ Cargo.lock
 .python-version
 
 **/*.pf
+dist/
+build/
+*.egg-info/

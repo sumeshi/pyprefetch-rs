@@ -2,7 +2,7 @@ from setuptools import setup
 from setuptools_rust import Binding, RustExtension
 
 setup(
-    name='prefetch',
+    name='pyprefetch-rs',
     version='0.1.0',
     rust_extensions = [
         RustExtension(

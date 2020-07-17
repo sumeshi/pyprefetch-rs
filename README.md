@@ -37,7 +37,7 @@ for volume in p.get_volumes():
 via pip
 
 ```
-$ pip install git+https://github.com/sumeshi/pyprefetch-rs
+$ pip install pyprefetch-rs
 ```
 
 The source code for pyprefetch-rs is hosted at GitHub, and you may download, fork, and review it from this repository(https://github.com/sumeshi/pyprefetch-rs).
