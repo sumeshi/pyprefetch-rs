@@ -1,5 +1,9 @@
 # pyprefetch-rs
 
+:warning: Attention!!
+This library is deprecated.
+Due to the prerequisite library for [prefetch2es](https://github.com/sumeshi/prefetch2es/) has been switched to libscca.
+
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
 Python bindings for `https://docs.rs/libprefetch/0.1.1/libprefetch/`
